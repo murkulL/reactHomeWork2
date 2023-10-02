@@ -1,0 +1,33 @@
+
+.card{
+  max-width: 300px;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 5px 5px 0 black;
+  position: relative;
+}
+.card__user{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+}
+.card__user-rating{
+  flex: 1;
+  text-align: end;
+}
+.card__info{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card__levercourse p{
+  background-color: white;
+  border: 1px solid white;
+  position: absolute;
+  top: 115px;
+  left: 15px;
+  padding: 10px;
+  border-radius: 5px;
+}
