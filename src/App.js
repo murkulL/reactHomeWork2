@@ -15,10 +15,11 @@ function App() {
       },
       rating: 4.5,
       students: 1234,
-      modules: 5,
+      modules: 10,
       duration: 5400,
       time: '1h30m',
       levelOfCourse : 'Beginner',
+      totalModules : 10,
     },
     {
       id: 2,
@@ -33,12 +34,14 @@ function App() {
       },
       rating: 4.5,
       students: 1234,
-      modules: 5,
+      modules: 10,
       finishedModules: 3,
       duration: 5400,
-      isMyCource: true,
+      isMyCourse: true,
       time: '1h20m',
       levelOfCourse : 'Elementary',
+      progressValue : 6,
+      totalModules : 10,
     },
   ];
 
@@ -57,8 +60,10 @@ function App() {
         time={course.time}
         students={course.students}
         duration={course.duration}
-        isMyCource={course.isMyCource}
+        isMyCourse={course.isMyCourse}
         levelOfCourse={course.levelOfCourse}
+        progressValue={course.progressValue}
+        totalModules={course.totalModules}
         />
       ))}
     </div>

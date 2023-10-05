@@ -3,7 +3,7 @@ import './Card.css';
 
 const Card = (props) => {
   return (
-    <div className={`card ${props.isMyCource ? 'my-course' : ''}`}>
+    <div className={`card ${props.isMyCourse ? 'my-course' : ''}`}>
       <img height={170} width={300} src={props.img} alt="images" />
       <h3>{props.title}</h3>
       <div className='card__user'>
@@ -17,17 +17,17 @@ const Card = (props) => {
         <p className='card__info-modules'>{props.modules} Modules</p>
         <data className='card__info-data'>{props.time}</data>
       </div>
-      {props.isMyCource && (
-        <>
-          <progress value="50" max="100">
-            50%
-          </progress>
-          <div className="card__info">
-            <p>5 / 10 Modules</p>
-            <div>50 %</div>
-          </div>
-        </>
-      )}
+      {props.isMyCourse && (
+  <>
+    <progress value={props.progressValue} max="10">
+      {`${props.progressValue}%`}
+    </progress>
+    <div className="card__info">
+      <p>{`${props.progressValue} / ${props.totalModules} Modules`}</p>
+      <div>{`${props.progressValue * props.totalModules} %`}</div>
+    </div>
+  </>
+)}
     </div>
   );
 };
